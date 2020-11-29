@@ -8,9 +8,11 @@ html{
 .container{
   width:calc(100% - 65px);
   background:#f35900;
-  background:#b9cedb;
-  background:#000;
-  background:#e5dcc9;
+  background:#ff362f;
+  background:#f2f2f2;
+  /* background:#b9cedb; */
+  /* background:#000; */
+  /* background:#e5dcc9; */
   color:#000;
 }
 .header{
@@ -33,7 +35,9 @@ html{
 }
 
 .main{
-  margin:0 20px 20px;
+  height: calc(100vh - 200px);
+  margin:0 20px;
+  border:1px solid black
   /* border:1px solid #fff; */
 }
 .footer{

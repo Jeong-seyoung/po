@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@font-face{
+  font-family: "Knile";
+  src:url(./font/Knile-Regular.otf)
+}
+/* 공통 css */
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+
+html{
+  font-size:16px;
+  font-family: 'knile', serif;
+}
+.container{
+  margin-left: 100px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.logo{
+  margin-top:40px;
+  font-size:24px;
+  width:100px;
+  height: 100px;
+ }
+ .logo img{
+  max-width:100%;
+ }
+
+
+ .nav{
+   position: fixed;
+   top:0;
+   left:0;
+   width:100px;
+   height: 100%;
+   z-index: 1000;
+   background-color: black;
+   background-color: #fff;
+   text-align: center;
+   padding:20px 0;
+ }
+ .nav ul li>* {
+  font-size: 20px; 
+  color:#fff;
+  color:#000;
+  padding:2px;
+  margin: 20px 0;
+  display: inline-block;
+ }
+ .navbar li:nth-child(1){
+   /* border:1px solid red; */
+   height: 30vh;
+ }
+ .nav i {
+   cursor: pointer;
+ }
+ 
+ .navbar-inner{
+   border:1px solid red;
+   position: absolute;
+   top:0;
+   left:0;
+   width:200px;
+   height: 100%;
+   background-color: #000;
+   background-color: #fff;
+   color:#fff;
+   text-align: left;
+   padding-top:100px;
+   padding-left:20px;
+   z-index: -1;
+   transform: translateX(-100%);
+
+ }
+
+
+
+
+ .intro{
+   padding:50px;
+   font-size: 400%;
+   width:calc(55% - 100px);
+ }
+ .accordion-list{
+   position: absolute;
+   top:0;
+   right:0;
+   width:100vw;
+   height: 100vh;
+ }
+ .accordion-list li{
+   width: 25%;
+   height: 100%;
+   padding: 20px;
+   position: absolute;
+   background: #ff362f;
+   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+ }
+ .accordion-list li:nth-child(1){
+ right:10%;
+ }
+ .accordion-list li:nth-child(2){
+  right:0; 
+}
+.accordion-list li:nth-child(3){
+  right:-10%;
+}
+.accordion-list li:nth-child(4){
+  right:-20%;
+  background-color: black;
+  color:#fff;
+}
+
+.accordion-list li:hover{
+  transform:translateX(-5%);
+  transition: 1s all;
+}
+.accordion-list h3{
+  font-size:30px;
+  font-weight: 900;
+  margin:20px 0;
+}
+
+.accordion-list li section>span:nth-child(2) {
+  font-size:60px;
+  font-weight: 900;
+  vertical-align: middle;
+  display: inline-block;
+  width:100%;
+}
+.toggle {
+  padding:0;
+  margin:0;
+  width:50%;
+  display: inline-block;
+  text-align: right;
+  padding-right:50px;
+ 
+}
+.fa-toggle-off{
+  font-size:25px;
+  vertical-align: middle;
+  transform: translateX();
+}
+
+.fa-angle-double-left{
+  transform:translateX(0);
+  animation: ani2 infinite 2s;
+}
+@keyframes ani2{
+  0%{
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(-20%);
+    opacity: 1;
+  }
+}
