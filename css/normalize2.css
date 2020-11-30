@@ -98,37 +98,49 @@ html{
    height: 100vh;
  }
  .accordion-list li{
-   width: 25%;
+   width: 70%;
    height: 100%;
    padding: 20px;
    position: absolute;
+   left:100px;
    background: #ff362f;
+   transform: translateX(100%);
    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
  }
  .accordion-list li:nth-child(1){
- right:10%;
- }
+ 
+}
  .accordion-list li:nth-child(2){
-  right:0; 
+  left:200px;
 }
 .accordion-list li:nth-child(3){
-  right:-10%;
+  left:300px;
 }
 .accordion-list li:nth-child(4){
-  right:-20%;
+  left:400px;
   background-color: black;
   color:#fff;
 }
 
 .accordion-list li:hover{
-  transform:translateX(-5%);
-  transition: 1s all;
+transform:translateX(95%);
+transition:1.5s all
 }
+.accordion-list li.active{
+  margin-left:80px;
+  transform:translateX(0%);
+  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: red; */
+  border:1px solid #fff;
+  color:#fff;
+}
+
 .accordion-list h3{
   font-size:30px;
   font-weight: 900;
   margin:20px 0;
 }
+
 
 .accordion-list li section>span:nth-child(2) {
   font-size:60px;
@@ -149,7 +161,6 @@ html{
 .fa-toggle-off{
   font-size:25px;
   vertical-align: middle;
-  transform: translateX();
 }
 
 .fa-angle-double-left{
