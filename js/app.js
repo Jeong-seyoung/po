@@ -20,6 +20,4 @@ $accordionList.onclick = (e) => {
       
     };
   })
-
- 
 }
