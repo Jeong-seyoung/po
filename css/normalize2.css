@@ -101,7 +101,7 @@ html{
    right:0;
    left:100px;
    width:calc(100% - 100px);
-   height: 100vh;
+   height: 100%;
    
  }
  .accordion-list h3{
@@ -116,17 +116,17 @@ html{
    padding: 20px;
    position: absolute;
    background: #ff362f;
-   right:0;
+   left:76%;
    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
  }
   .accordion-list > li:nth-child(2){
-  right:-5%;
+  left:84%;
 }
 .accordion-list > li:nth-child(3){
-  right:-10%;
+  left:90%;
 }
 .accordion-list > li:nth-child(4){
-  right:-15%;
+  left:94%;
   background-color: black;
   color:#fff;
 }
@@ -139,22 +139,21 @@ transition:0.5s all
   right:0;
   left:0;
   width:85%;
-  transform: none;
   padding:0;
-  /* transition: 2s all; */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* background-color: red; */
+  transform: none;
+  background-color: rgba(0, 0, 0, 0.8);
   color:#fff;
-  
 }
 .accordion-list > li section:nth-child(2){
   display: none;
 }
 .accordion-list > li.active section:nth-child(1){
-  display: none;
+  /* opacity: 0; */
+ display: none;
 }
 .accordion-list > li.active section:nth-child(2){
   display: block;
+  transition: 1s all;
 }
 
 .accordion-list li section>span:nth-child(2) {
@@ -164,14 +163,18 @@ transition:0.5s all
   display: inline-block;
   width:100%;
 }
+
+
+
 /* 포트폴리오 */
 .portfolio {
   height:100%;
 }
-.portfolio ul,.portfolio ul li {
-position: relative;
-height: 100%;
 
+.portfolio ul,.portfolio ul li {
+  position: relative;
+  height: 100%;
+  
 }
 .portfolio article{
   height:100%;
@@ -179,35 +182,38 @@ height: 100%;
   position: relative;
 }
 .wrap{
+  min-width: 700px;
   width:100%;
   height: 500px;
   overflow: hidden;
   position: absolute;
   top:50%;
+  /* min-width: 1000px; */
+  max-height: 463px;
   transform: translateY(-50%);
 }
 .portfolio .wrap::after{
   content: '';
   display: block;
   width: 70%;
-  min-width: 800px;
+  /* min-width: 800px; */
   height: 100%;
   position: absolute;
   z-index: 1000;
-  bottom:5px;
+  bottom:0px;
   left:50%;
   transform: translateX(-50%);
-  background:no-repeat bottom/100% url(../img/macbook-bottom.png);
+  background:no-repeat bottom/100% url(../img/macbook-bottom.png)  ;
 }
 .portfolio article .img_wrap{
   display: inline-block;
   position: relative;
-  padding:30px;
   width: 60%;
-  min-width: 700px;
-  max-height: 470px;
+  max-height: 440px;
   overflow: hidden;
-  
+  padding:2px 15px;
+  background-color: #000;
+  border-radius:18px ;
 }
 .portfolio article .img_wrap::before{
   content: '';
@@ -216,7 +222,7 @@ height: 100%;
   height: 100%;
   position: absolute;
   z-index: 1000;
-  top:0;
+  top:-1.1px;
   left:0;
   background:no-repeat top/100% 100% url(../img/macbook-top.png);
 }
@@ -225,11 +231,12 @@ height: 100%;
   display: inline-block;
   width:100%;
   min-width: 400px;
-  
 }
-.accordion-list > li.active img{
+article img.run-animation{
   animation: ani4 10s infinite;
+  animation-delay: 0.5s;
 }
+
 @keyframes ani4{
   0%{
     transform: translateY(0);
@@ -239,6 +246,15 @@ height: 100%;
   }
   
 }
+.portfolio article p {
+  position: absolute;
+  padding:20px;
+  bottom:20px;
+  width:60%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
 
 .portfolio ul>li i {
   cursor: pointer;
@@ -261,33 +277,13 @@ height: 100%;
   right:50px;
 }
 
-.toggle {
-  padding:0;
-  margin:0;
-  width:50%;
-  display: inline-block;
-  text-align: right;
-  padding-right:50px;
- 
-}
-.fa-toggle-off{
-  font-size:25px;
-  vertical-align: middle;
-}
-
-.fa-angle-double-left{
-  transform:translateX(0);
-  animation: ani2 infinite 2s;
-}
-
-@keyframes ani2{
-  0%{
-    transform: translateX(0);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(-20%);
-    opacity: 1;
+@media (min-width:901px) and (max-width:1440px){
+  .portfolio .wrap::after{
+    bottom:8px
   }
 }
-
+@media (min-width:680px) and (max-width:900px){
+  .portfolio .wrap::after{
+    bottom:10px
+  }
+}
